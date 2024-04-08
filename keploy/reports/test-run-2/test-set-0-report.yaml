@@ -1,0 +1,65 @@
+version: api.keploy.io/v1beta1
+name: test-set-0-report
+status: FAILED
+success: 0
+failure: 1
+total: 1
+tests:
+    - kind: Http
+      name: test-set-0
+      status: FAILED
+      started: 1712552683
+      completed: 1712552683
+      test_case_path: /Users/shipsy/Documents/keploy/node_schools/keploy/test-set-0
+      mock_path: /Users/shipsy/Documents/keploy/node_schools/keploy/test-set-0/mocks.yaml
+      test_case_id: test-1
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://172.22.0.4:3000/
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "58"
+            Content-Type: application/json
+            Host: localhost:3000
+            Postman-Token: b9482a95-e348-4381-a338-9569b7bea382
+            User-Agent: PostmanRuntime/7.37.3
+        body: |-
+            {
+                    "name": "school1",
+                    "address": "bnglr1"
+            }
+        timestamp: 2024-04-08T04:59:21.339797983Z
+      resp:
+        status_code: 500
+        header:
+            Connection: keep-alive
+            Content-Length: "21"
+            Content-Type: text/plain; charset=utf-8
+            Date: Mon, 08 Apr 2024 04:59:21 GMT
+            Etag: W/"15-/6VXivhc2MKdLfIkLcUE47K6aH0"
+            Keep-Alive: timeout=5
+            X-Powered-By: Express
+        body: Internal Server Error
+        status_message: Internal Server Error
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-04-08T04:59:23.39505097Z
+      noise:
+        header.Date: []
+      result:
+        status_code:
+            normal: false
+            expected: 500
+            actual: 200
+        headers_result: []
+        body_result:
+            - normal: false
+              type: JSON
+              expected: Internal Server Error
+              actual: '{"message":"Successfully added child"}'
+        dep_result: []
+test_set: test-set-0

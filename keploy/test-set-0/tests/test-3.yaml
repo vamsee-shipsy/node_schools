@@ -7,45 +7,43 @@ spec:
         method: GET
         proto_major: 1
         proto_minor: 1
-        url: http://api:3000/
+        url: http://localhost:3000/
         header:
             Accept: '*/*'
             Accept-Encoding: gzip, deflate, br
             Connection: keep-alive
-            Cookie: sessionid=vpoy77ybtx5sw0tn6ja4cejznkm1sg7l
-            Host: api:3000
-            Postman-Token: 1c036e2f-b3db-4ba4-93b4-14e51ea35d6f
-            User-Agent: PostmanRuntime/7.37.0
+            Host: localhost:3000
+            Postman-Token: 91d182a2-9b80-4157-9b3a-22bf451c593d
+            User-Agent: PostmanRuntime/7.37.3
         body: ""
-        timestamp: 2024-04-03T16:59:10.151559966+05:30
+        timestamp: 2024-04-08T05:02:09.865834685Z
     resp:
         status_code: 200
         header:
             Connection: keep-alive
-            Content-Length: "94"
+            Content-Length: "87"
             Content-Type: application/json; charset=utf-8
-            Date: Wed, 03 Apr 2024 11:29:10 GMT
-            Etag: W/"5e-2fLDSrrOlXNMhBVvCIFRkPuWo14"
+            Date: Mon, 08 Apr 2024 05:02:09 GMT
+            Etag: W/"57-bh+wkeHYaaQbpqpku05yVhugW2w"
             Keep-Alive: timeout=5
             X-Powered-By: Express
-        body: '[{"id":4,"name":"school_api_1","address":"tt"},{"id":5,"name":"school_api_2","address":"tt4"}]'
+        body: '[{"id":5,"name":"school1","address":null},{"id":6,"name":"school1","address":"bnglr1"}]'
         status_message: OK
         proto_major: 0
         proto_minor: 0
-        timestamp: 2024-04-03T16:59:12.201623701+05:30
+        timestamp: 2024-04-08T05:02:11.91383809Z
     objects: []
     assertions:
         noise:
-            body.address: []
+            body.name: []
             header.Date: []
-    created: 1712143752
+    created: 1712552531
 curl: |
     curl --request GET \
-      --url http://api:3000/ \
-      --header 'User-Agent: PostmanRuntime/7.37.0' \
+      --url http://localhost:3000/ \
+      --header 'User-Agent: PostmanRuntime/7.37.3' \
       --header 'Accept: */*' \
-      --header 'Postman-Token: 1c036e2f-b3db-4ba4-93b4-14e51ea35d6f' \
-      --header 'Host: api:3000' \
+      --header 'Postman-Token: 91d182a2-9b80-4157-9b3a-22bf451c593d' \
+      --header 'Host: localhost:3000' \
       --header 'Accept-Encoding: gzip, deflate, br' \
       --header 'Connection: keep-alive' \
-      --header 'Cookie: sessionid=vpoy77ybtx5sw0tn6ja4cejznkm1sg7l' \

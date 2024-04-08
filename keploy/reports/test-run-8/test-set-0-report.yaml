@@ -1,0 +1,359 @@
+version: api.keploy.io/v1beta1
+name: test-set-0-report
+status: PASSED
+success: 3
+failure: 0
+total: 3
+tests:
+    - kind: Http
+      name: test-set-0
+      status: PASSED
+      started: 1712566228
+      completed: 1712566228
+      test_case_path: /Users/shipsy/Documents/keploy/node_schools/keploy/test-set-0
+      mock_path: /Users/shipsy/Documents/keploy/node_schools/keploy/test-set-0/mocks.yaml
+      test_case_id: test-1
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://172.22.0.4:3000/
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "58"
+            Content-Type: application/json
+            Host: localhost:3000
+            Postman-Token: 6782477d-09ee-4a29-b104-0b6b1bcc9d2f
+            User-Agent: PostmanRuntime/7.37.3
+        body: |-
+            {
+                    "name": "school1",
+                    "address": "bnglr1"
+            }
+        timestamp: 2024-04-08T05:01:57.090090263Z
+      resp:
+        status_code: 200
+        header:
+            Connection: keep-alive
+            Content-Length: "38"
+            Content-Type: application/json; charset=utf-8
+            Date: Mon, 08 Apr 2024 05:01:57 GMT
+            Etag: W/"26-yZDMiQ1NwyIkpv28H1FPyhS8hCQ"
+            Keep-Alive: timeout=5
+            X-Powered-By: Express
+        body: '{"message":"Successfully added child"}'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-04-08T05:01:59.349589709Z
+      noise:
+        header.Date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "38"
+              actual:
+                key: Content-Length
+                value:
+                    - "38"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
+              actual:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Mon, 08 Apr 2024 05:01:57 GMT
+              actual:
+                key: Date
+                value:
+                    - Mon, 08 Apr 2024 08:50:28 GMT
+            - normal: true
+              expected:
+                key: Etag
+                value:
+                    - W/"26-yZDMiQ1NwyIkpv28H1FPyhS8hCQ"
+              actual:
+                key: Etag
+                value:
+                    - W/"26-yZDMiQ1NwyIkpv28H1FPyhS8hCQ"
+            - normal: true
+              expected:
+                key: Keep-Alive
+                value:
+                    - timeout=5
+              actual:
+                key: Keep-Alive
+                value:
+                    - timeout=5
+            - normal: true
+              expected:
+                key: X-Powered-By
+                value:
+                    - Express
+              actual:
+                key: X-Powered-By
+                value:
+                    - Express
+            - normal: true
+              expected:
+                key: Connection
+                value:
+                    - keep-alive
+              actual:
+                key: Connection
+                value:
+                    - keep-alive
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '{"message":"Successfully added child"}'
+              actual: '{"message":"Successfully added child"}'
+        dep_result: []
+    - kind: Http
+      name: test-set-0
+      status: PASSED
+      started: 1712566228
+      completed: 1712566228
+      test_case_path: /Users/shipsy/Documents/keploy/node_schools/keploy/test-set-0
+      mock_path: /Users/shipsy/Documents/keploy/node_schools/keploy/test-set-0/mocks.yaml
+      test_case_id: test-2
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://172.22.0.4:3000/
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "38"
+            Content-Type: application/json
+            Host: localhost:3000
+            Postman-Token: 47aafbdb-a877-4ae9-aa8f-9fb57326bd99
+            User-Agent: PostmanRuntime/7.37.3
+        body: "{\n        \"name\": \"school1\"\n        \n}"
+        timestamp: 2024-04-08T05:02:06.136285433Z
+      resp:
+        status_code: 400
+        header:
+            Connection: keep-alive
+            Content-Length: "43"
+            Content-Type: application/json; charset=utf-8
+            Date: Mon, 08 Apr 2024 05:02:06 GMT
+            Etag: W/"2b-CyGF4SVUO3yALzgcpihAQEwFNOA"
+            Keep-Alive: timeout=5
+            X-Powered-By: Express
+        body: '{"message":"Name and address are required"}'
+        status_message: Bad Request
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-04-08T05:02:08.172016713Z
+      noise:
+        header.Date: []
+      result:
+        status_code:
+            normal: true
+            expected: 400
+            actual: 400
+        headers_result:
+            - normal: true
+              expected:
+                key: Keep-Alive
+                value:
+                    - timeout=5
+              actual:
+                key: Keep-Alive
+                value:
+                    - timeout=5
+            - normal: true
+              expected:
+                key: X-Powered-By
+                value:
+                    - Express
+              actual:
+                key: X-Powered-By
+                value:
+                    - Express
+            - normal: true
+              expected:
+                key: Connection
+                value:
+                    - keep-alive
+              actual:
+                key: Connection
+                value:
+                    - keep-alive
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "43"
+              actual:
+                key: Content-Length
+                value:
+                    - "43"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
+              actual:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Mon, 08 Apr 2024 05:02:06 GMT
+              actual:
+                key: Date
+                value:
+                    - Mon, 08 Apr 2024 08:50:28 GMT
+            - normal: true
+              expected:
+                key: Etag
+                value:
+                    - W/"2b-CyGF4SVUO3yALzgcpihAQEwFNOA"
+              actual:
+                key: Etag
+                value:
+                    - W/"2b-CyGF4SVUO3yALzgcpihAQEwFNOA"
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '{"message":"Name and address are required"}'
+              actual: '{"message":"Name and address are required"}'
+        dep_result: []
+    - kind: Http
+      name: test-set-0
+      status: PASSED
+      started: 1712566228
+      completed: 1712566228
+      test_case_path: /Users/shipsy/Documents/keploy/node_schools/keploy/test-set-0
+      mock_path: /Users/shipsy/Documents/keploy/node_schools/keploy/test-set-0/mocks.yaml
+      test_case_id: test-3
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://172.22.0.4:3000/
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: localhost:3000
+            Postman-Token: 91d182a2-9b80-4157-9b3a-22bf451c593d
+            User-Agent: PostmanRuntime/7.37.3
+        body: ""
+        timestamp: 2024-04-08T05:02:09.865834685Z
+      resp:
+        status_code: 200
+        header:
+            Connection: keep-alive
+            Content-Length: "87"
+            Content-Type: application/json; charset=utf-8
+            Date: Mon, 08 Apr 2024 05:02:09 GMT
+            Etag: W/"57-bh+wkeHYaaQbpqpku05yVhugW2w"
+            Keep-Alive: timeout=5
+            X-Powered-By: Express
+        body: '[{"id":5,"name":"school1","address":null},{"id":6,"name":"school1","address":"bnglr1"}]'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-04-08T05:02:11.91383809Z
+      noise:
+        body.name: []
+        header.Date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Mon, 08 Apr 2024 05:02:09 GMT
+              actual:
+                key: Date
+                value:
+                    - Mon, 08 Apr 2024 08:50:28 GMT
+            - normal: true
+              expected:
+                key: Etag
+                value:
+                    - W/"57-bh+wkeHYaaQbpqpku05yVhugW2w"
+              actual:
+                key: Etag
+                value:
+                    - W/"57-bh+wkeHYaaQbpqpku05yVhugW2w"
+            - normal: true
+              expected:
+                key: Keep-Alive
+                value:
+                    - timeout=5
+              actual:
+                key: Keep-Alive
+                value:
+                    - timeout=5
+            - normal: true
+              expected:
+                key: X-Powered-By
+                value:
+                    - Express
+              actual:
+                key: X-Powered-By
+                value:
+                    - Express
+            - normal: true
+              expected:
+                key: Connection
+                value:
+                    - keep-alive
+              actual:
+                key: Connection
+                value:
+                    - keep-alive
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "87"
+              actual:
+                key: Content-Length
+                value:
+                    - "87"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
+              actual:
+                key: Content-Type
+                value:
+                    - application/json; charset=utf-8
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '[{"id":5,"name":"school1","address":null},{"id":6,"name":"school1","address":"bnglr1"}]'
+              actual: '[{"id":5,"name":"school1","address":null},{"id":6,"name":"school1","address":"bnglr1"}]'
+        dep_result: []
+test_set: test-set-0

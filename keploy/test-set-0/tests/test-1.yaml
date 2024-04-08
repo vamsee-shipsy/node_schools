@@ -7,30 +7,29 @@ spec:
         method: POST
         proto_major: 1
         proto_minor: 1
-        url: http://api:3000/
+        url: http://localhost:3000/
         header:
             Accept: '*/*'
             Accept-Encoding: gzip, deflate, br
             Connection: keep-alive
-            Content-Length: "54"
+            Content-Length: "58"
             Content-Type: application/json
-            Cookie: sessionid=vpoy77ybtx5sw0tn6ja4cejznkm1sg7l
-            Host: api:3000
-            Postman-Token: e49dd83c-255c-485b-b3f1-197e48753a4e
-            User-Agent: PostmanRuntime/7.37.0
+            Host: localhost:3000
+            Postman-Token: 6782477d-09ee-4a29-b104-0b6b1bcc9d2f
+            User-Agent: PostmanRuntime/7.37.3
         body: |-
             {
-                "name" : "school_api_1",
-                "location" : "tt"
+                    "name": "school1",
+                    "address": "bnglr1"
             }
-        timestamp: 2024-04-03T16:58:55.683735646+05:30
+        timestamp: 2024-04-08T05:01:57.090090263Z
     resp:
         status_code: 200
         header:
             Connection: keep-alive
             Content-Length: "38"
             Content-Type: application/json; charset=utf-8
-            Date: Wed, 03 Apr 2024 11:28:55 GMT
+            Date: Mon, 08 Apr 2024 05:01:57 GMT
             Etag: W/"26-yZDMiQ1NwyIkpv28H1FPyhS8hCQ"
             Keep-Alive: timeout=5
             X-Powered-By: Express
@@ -38,24 +37,23 @@ spec:
         status_message: OK
         proto_major: 0
         proto_minor: 0
-        timestamp: 2024-04-03T16:58:57.751541115+05:30
+        timestamp: 2024-04-08T05:01:59.349589709Z
     objects: []
     assertions:
         noise:
             header.Date: []
-    created: 1712143737
+    created: 1712552519
 curl: |-
     curl --request POST \
-      --url http://api:3000/ \
-      --header 'Accept: */*' \
-      --header 'User-Agent: PostmanRuntime/7.37.0' \
-      --header 'Cookie: sessionid=vpoy77ybtx5sw0tn6ja4cejznkm1sg7l' \
-      --header 'Host: api:3000' \
-      --header 'Content-Type: application/json' \
-      --header 'Connection: keep-alive' \
+      --url http://localhost:3000/ \
+      --header 'Host: localhost:3000' \
       --header 'Accept-Encoding: gzip, deflate, br' \
-      --header 'Postman-Token: e49dd83c-255c-485b-b3f1-197e48753a4e' \
+      --header 'Connection: keep-alive' \
+      --header 'Content-Type: application/json' \
+      --header 'User-Agent: PostmanRuntime/7.37.3' \
+      --header 'Accept: */*' \
+      --header 'Postman-Token: 6782477d-09ee-4a29-b104-0b6b1bcc9d2f' \
       --data '{
-        "name" : "school_api_1",
-        "location" : "tt"
+            "name": "school1",
+            "address": "bnglr1"
     }'

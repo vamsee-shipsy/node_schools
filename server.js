@@ -21,10 +21,13 @@ app.get('/', async (req, res) => {
 })
 
 app.post('/', async (req, res) => {
-    const { name, location } = req.body
+    if (!req.body.name || !req.body.address) {
+        return res.status(400).send({ message: "Name and address are required" });
+    }
+    const { name, address } = req.body
     const client = await pool.connect()
     try {
-        await client.query('INSERT INTO schools (name, address) VALUES ($1, $2)', [name, location])
+        await client.query('INSERT INTO schools (name, address) VALUES ($1, $2)', [name, address])
         res.status(200).send({ message: "Successfully added child" })
     } catch (err) {
         console.log(err)
@@ -51,3 +54,5 @@ app.get('/setup', async (req, res) => {
 
 
 app.listen(port, () => console.log(`Server has started on port: ${port}`))
+
+module.exports = app

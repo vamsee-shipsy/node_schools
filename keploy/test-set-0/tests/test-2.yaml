@@ -7,55 +7,36 @@ spec:
         method: POST
         proto_major: 1
         proto_minor: 1
-        url: http://api:3000/
+        url: http://localhost:3000/
         header:
             Accept: '*/*'
             Accept-Encoding: gzip, deflate, br
             Connection: keep-alive
-            Content-Length: "55"
+            Content-Length: "38"
             Content-Type: application/json
-            Cookie: sessionid=vpoy77ybtx5sw0tn6ja4cejznkm1sg7l
-            Host: api:3000
-            Postman-Token: f93a0c60-7aa0-4e9c-a2a4-60f66171d31e
-            User-Agent: PostmanRuntime/7.37.0
-        body: |-
-            {
-                "name" : "school_api_2",
-                "location" : "tt4"
-            }
-        timestamp: 2024-04-03T16:59:06.236520364+05:30
+            Host: localhost:3000
+            Postman-Token: 47aafbdb-a877-4ae9-aa8f-9fb57326bd99
+            User-Agent: PostmanRuntime/7.37.3
+        body: "{\n        \"name\": \"school1\"\n        \n}"
+        timestamp: 2024-04-08T05:02:06.136285433Z
     resp:
-        status_code: 200
+        status_code: 400
         header:
             Connection: keep-alive
-            Content-Length: "38"
+            Content-Length: "43"
             Content-Type: application/json; charset=utf-8
-            Date: Wed, 03 Apr 2024 11:29:06 GMT
-            Etag: W/"26-yZDMiQ1NwyIkpv28H1FPyhS8hCQ"
+            Date: Mon, 08 Apr 2024 05:02:06 GMT
+            Etag: W/"2b-CyGF4SVUO3yALzgcpihAQEwFNOA"
             Keep-Alive: timeout=5
             X-Powered-By: Express
-        body: '{"message":"Successfully added child"}'
-        status_message: OK
+        body: '{"message":"Name and address are required"}'
+        status_message: Bad Request
         proto_major: 0
         proto_minor: 0
-        timestamp: 2024-04-03T16:59:08.288309155+05:30
+        timestamp: 2024-04-08T05:02:08.172016713Z
     objects: []
     assertions:
         noise:
             header.Date: []
-    created: 1712143748
-curl: |-
-    curl --request POST \
-      --url http://api:3000/ \
-      --header 'Content-Type: application/json' \
-      --header 'User-Agent: PostmanRuntime/7.37.0' \
-      --header 'Accept-Encoding: gzip, deflate, br' \
-      --header 'Connection: keep-alive' \
-      --header 'Accept: */*' \
-      --header 'Postman-Token: f93a0c60-7aa0-4e9c-a2a4-60f66171d31e' \
-      --header 'Cookie: sessionid=vpoy77ybtx5sw0tn6ja4cejznkm1sg7l' \
-      --header 'Host: api:3000' \
-      --data '{
-        "name" : "school_api_2",
-        "location" : "tt4"
-    }'
+    created: 1712552528
+curl: "curl --request POST \\\n  --url http://localhost:3000/ \\\n  --header 'User-Agent: PostmanRuntime/7.37.3' \\\n  --header 'Accept: */*' \\\n  --header 'Postman-Token: 47aafbdb-a877-4ae9-aa8f-9fb57326bd99' \\\n  --header 'Host: localhost:3000' \\\n  --header 'Accept-Encoding: gzip, deflate, br' \\\n  --header 'Connection: keep-alive' \\\n  --header 'Content-Type: application/json' \\\n  --data '{\n        \"name\": \"school1\"\n        \n}'"
