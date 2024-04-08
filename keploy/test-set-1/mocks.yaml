@@ -1,0 +1,203 @@
+version: api.keploy.io/v1beta1
+kind: Postgres
+name: mock-0
+spec:
+    metadata:
+        type: config
+    postgresrequests:
+        - identifier: StartupRequest
+          length: 62
+          payload: AAAAPgADAAB1c2VyAHBvc3RncmVzAGRhdGFiYXNlAHBvc3RncmVzAGNsaWVudF9lbmNvZGluZwBVVEY4AAA=
+          startup_message:
+            protocolversion: 196608
+            parameters:
+                client_encoding: UTF8
+                database: postgres
+                user: postgres
+          auth_type: 0
+    postgresresponses:
+        - header: [R]
+          identifier: ServerResponse
+          length: 62
+          authentication_md5_password:
+            salt: [0, 0, 0, 0]
+          authentication_sasl:
+            auth_mechanisms:
+                - SCRAM-SHA-256
+          msg_type: 82
+          auth_type: 10
+    reqtimestampmock: 2024-04-03T17:12:01.80788397+05:30
+    restimestampmock: 2024-04-03T17:12:01.809152693+05:30
+connectionId: "0"
+---
+version: api.keploy.io/v1beta1
+kind: Postgres
+name: mock-1
+spec:
+    metadata:
+        type: config
+    postgresrequests:
+        - header: [p]
+          identifier: ClientRequest
+          length: 62
+          password_message:
+            password: SCRAM-SHA-256
+          msg_type: 112
+          auth_type: 0
+    postgresresponses:
+        - header: [R]
+          identifier: ServerResponse
+          length: 62
+          authentication_md5_password:
+            salt: [0, 0, 0, 0]
+          authentication_sasl_continue: {data: [114, 61, 54, 82, 117, 121, 47, 112, 121, 86, 122, 104, 49, 87, 87, 78, 66, 116, 107, 119, 117, 68, 104, 101, 52, 67, 88, 51, 70, 65, 100, 103, 103, 116, 105, 83, 122, 85, 88, 115, 77, 49, 111, 56, 43, 66, 54, 112, 87, 76, 44, 115, 61, 103, 118, 115, 65, 57, 114, 76, 115, 87, 71, 75, 49, 108, 107, 118, 67, 108, 106, 49, 100, 90, 103, 61, 61, 44, 105, 61, 52, 48, 57, 54]}
+          msg_type: 82
+          auth_type: 11
+    reqtimestampmock: 2024-04-03T17:12:01.810738966+05:30
+    restimestampmock: 2024-04-03T17:12:01.810781925+05:30
+connectionId: "0"
+---
+version: api.keploy.io/v1beta1
+kind: Postgres
+name: mock-2
+spec:
+    metadata:
+        type: config
+    postgresrequests:
+        - header: [p]
+          identifier: ClientRequest
+          length: 62
+          msg_type: 112
+          auth_type: 0
+    postgresresponses:
+        - header: [R, R, S, S, S, S, S, S, S, S, S, S, S, S, S, S, K, Z]
+          identifier: ServerResponse
+          length: 62
+          authentication_md5_password:
+            salt: [0, 0, 0, 0]
+          authentication_sasl_final: {data: [118, 61, 75, 88, 120, 97, 122, 119, 118, 102, 65, 76, 79, 82, 107, 77, 122, 75, 113, 70, 109, 119, 48, 104, 103, 109, 74, 72, 73, 83, 73, 114, 66, 86, 90, 50, 114, 107, 105, 78, 102, 65, 72, 107, 111, 61]}
+          backend_key_data:
+            process_id: 31
+            secret_key: 3611325153
+          parameter_status:
+            - name: in_hot_standby
+              value: "off"
+            - name: integer_datetimes
+              value: "on"
+            - name: TimeZone
+              value: Etc/UTC
+            - name: IntervalStyle
+              value: postgres
+            - name: is_superuser
+              value: "on"
+            - name: application_name
+              value: ""
+            - name: default_transaction_read_only
+              value: "off"
+            - name: scram_iterations
+              value: "4096"
+            - name: DateStyle
+              value: ISO, MDY
+            - name: standard_conforming_strings
+              value: "on"
+            - name: session_authorization
+              value: postgres
+            - name: client_encoding
+              value: UTF8
+            - name: server_version
+              value: 16.2 (Debian 16.2-1.pgdg120+2)
+            - name: server_encoding
+              value: UTF8
+            - name: server_encoding
+              value: UTF8
+            - name: server_encoding
+              value: UTF8
+          ready_for_query:
+            txstatus: 73
+          msg_type: 90
+          auth_type: 0
+    reqtimestampmock: 2024-04-03T17:12:01.822725751+05:30
+    restimestampmock: 2024-04-03T17:12:01.822780023+05:30
+connectionId: "0"
+---
+version: api.keploy.io/v1beta1
+kind: Postgres
+name: mock-3
+spec:
+    metadata:
+        type: config
+    postgresrequests:
+        - header: [P]
+          identifier: ClientRequest
+          length: 62
+          parse:
+            - name: ""
+              query: INSERT INTO schools (name, address) VALUES ($1, $2)
+              parameter_oids: []
+          msg_type: 80
+          auth_type: 0
+        - header: [B, D]
+          identifier: ClientRequest
+          length: 62
+          bind:
+            - parameter_format_codes: [0, 0]
+              parameters: [[115, 99, 104, 111, 111, 108, 95, 97, 112, 105, 95, 51], [116, 116, 52]]
+          describe:
+            object_type: 80
+            name: ""
+          msg_type: 68
+          auth_type: 0
+        - header: [E]
+          identifier: ClientRequest
+          length: 62
+          execute:
+            - {}
+          msg_type: 69
+          auth_type: 0
+    postgresresponses:
+        - header: ["1", "2", "n", C, Z]
+          identifier: ServerResponse
+          length: 62
+          authentication_md5_password:
+            salt: [0, 0, 0, 0]
+          command_complete:
+            - command_tag_type: INSERT 0 1
+          ready_for_query:
+            txstatus: 73
+          msg_type: 90
+          auth_type: 0
+    reqtimestampmock: 2024-04-03T17:12:01.831231699+05:30
+    restimestampmock: 2024-04-03T17:12:01.831264928+05:30
+connectionId: "0"
+---
+version: api.keploy.io/v1beta1
+kind: Postgres
+name: mock-4
+spec:
+    metadata:
+        type: config
+    postgresrequests:
+        - header: [Q]
+          identifier: ClientRequest
+          length: 62
+          query:
+            string: SELECT * FROM schools
+          msg_type: 81
+          auth_type: 0
+    postgresresponses:
+        - header: [T, D, D, D, C, Z]
+          identifier: ServerResponse
+          length: 62
+          authentication_md5_password:
+            salt: [0, 0, 0, 0]
+          command_complete:
+            - command_tag_type: SELECT 3
+          data_row: [{row_values: ["4", school_api_1, tt]}, {row_values: ["5", school_api_2, tt4]}, {row_values: ["6", school_api_3, tt4]}]
+          ready_for_query:
+            txstatus: 73
+          row_description: {fields: [{field_name: id, table_oid: 16389, table_attribute_number: 1, data_type_oid: 23, data_type_size: 4, type_modifier: -1, format: 0}, {field_name: name, table_oid: 16389, table_attribute_number: 2, data_type_oid: 1043, data_type_size: -1, type_modifier: 104, format: 0}, {field_name: address, table_oid: 16389, table_attribute_number: 3, data_type_oid: 1043, data_type_size: -1, type_modifier: 104, format: 0}]}
+          msg_type: 90
+          auth_type: 0
+    reqtimestampmock: 2024-04-03T17:12:05.086400461+05:30
+    restimestampmock: 2024-04-03T17:12:05.086444396+05:30
+connectionId: "0"

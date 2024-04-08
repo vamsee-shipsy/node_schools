@@ -1,0 +1,61 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-2
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://api:3000/
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "55"
+            Content-Type: application/json
+            Cookie: sessionid=vpoy77ybtx5sw0tn6ja4cejznkm1sg7l
+            Host: api:3000
+            Postman-Token: f93a0c60-7aa0-4e9c-a2a4-60f66171d31e
+            User-Agent: PostmanRuntime/7.37.0
+        body: |-
+            {
+                "name" : "school_api_2",
+                "location" : "tt4"
+            }
+        timestamp: 2024-04-03T16:59:06.236520364+05:30
+    resp:
+        status_code: 200
+        header:
+            Connection: keep-alive
+            Content-Length: "38"
+            Content-Type: application/json; charset=utf-8
+            Date: Wed, 03 Apr 2024 11:29:06 GMT
+            Etag: W/"26-yZDMiQ1NwyIkpv28H1FPyhS8hCQ"
+            Keep-Alive: timeout=5
+            X-Powered-By: Express
+        body: '{"message":"Successfully added child"}'
+        status_message: OK
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-04-03T16:59:08.288309155+05:30
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1712143748
+curl: |-
+    curl --request POST \
+      --url http://api:3000/ \
+      --header 'Content-Type: application/json' \
+      --header 'User-Agent: PostmanRuntime/7.37.0' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Connection: keep-alive' \
+      --header 'Accept: */*' \
+      --header 'Postman-Token: f93a0c60-7aa0-4e9c-a2a4-60f66171d31e' \
+      --header 'Cookie: sessionid=vpoy77ybtx5sw0tn6ja4cejznkm1sg7l' \
+      --header 'Host: api:3000' \
+      --data '{
+        "name" : "school_api_2",
+        "location" : "tt4"
+    }'
